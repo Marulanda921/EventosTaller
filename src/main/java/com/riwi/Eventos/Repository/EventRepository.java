@@ -6,5 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EventRepository extends JpaRepository<Evento, String> {
-    public Evento findByName(String name);
+
+    //Aqui tiene que tener el mismo nombre de la entidad
+    public Evento findByNombre(String name);
+
 }

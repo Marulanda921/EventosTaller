@@ -1,6 +1,7 @@
 package com.riwi.Eventos.Services;
 
 import com.riwi.Eventos.Entity.Evento;
+import com.riwi.Eventos.Repository.EventRepository;
 import com.riwi.Eventos.Services.IServices.AbstService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import java.util.List;
 public class EventService implements AbstService {
 
     @Autowired
-    private final EventService objEventoRep;
+    private final EventRepository objEventoRep;
 
     @Override
     public Evento save(Evento evento) {
@@ -44,4 +45,5 @@ public class EventService implements AbstService {
     public List<Evento> search(String name) {
         return null;
     }
+    
 }
