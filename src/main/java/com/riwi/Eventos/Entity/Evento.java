@@ -1,5 +1,7 @@
 package com.riwi.Eventos.Entity;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,7 +10,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 
 @Entity(name = "Evento")
 @NoArgsConstructor
@@ -24,3 +25,13 @@ public class Evento {
     private int capacidad;
 
 }
+
+
+/*
+ * {
+    "nombre": "Alejandro",
+    "fecha": "22-03-2004",
+    "ubicacion": "Risaralda",
+    "capacidad": 10
+}
+ */

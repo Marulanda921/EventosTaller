@@ -23,7 +23,7 @@ public class EventService implements AbstService {
 
     @Override
     public List<Evento> getAll() {
-        return null;
+        return this.objEventoRep.findAll();
     }
 
     @Override
@@ -38,12 +38,15 @@ public class EventService implements AbstService {
 
     @Override
     public Evento update(String id, Evento objEvento) {
-        return null;
+        this.objEventoRep.findById(id).orElseThrow();
+        objEvento.setId(id);
+
+        return this.objEventoRep.save(objEvento);
     }
 
     @Override
     public List<Evento> search(String name) {
         return null;
     }
-    
+
 }
